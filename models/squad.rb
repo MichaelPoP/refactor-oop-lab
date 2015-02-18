@@ -33,6 +33,8 @@ class Squad
     new @conn.exec('SELECT * FROM squads WHERE id = ($1)', [ id ] )[0], true
   end
 
+
+
   def students
     Squad.conn.exec("SELECT * FROM students WHERE squad_id = ($1)", [id])
   end
